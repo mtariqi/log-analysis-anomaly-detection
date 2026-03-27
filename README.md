@@ -4,28 +4,38 @@ This project demonstrates a Python-based approach to analyzing logs, detecting a
 
 ---
 
-## Key Features
+## Why this project
 
-- 📊 Log parsing and analysis using Python
-- ⚠️ Detection of anomalous patterns in structured data
-- 🧠 Basic simulation of alert triage workflows
-- 🛡️ Mapping of findings to MITRE ATT&CK concepts
-- ⚡ Focus on reducing noise and improving signal detection
+Security teams often deal with high volumes of alerts, many of which are noisy or low-value. This project explores how simple Python-based automation can help:
 
----
+- parse and analyze logs
+- identify suspicious activity patterns
+- reduce manual triage effort
+- support more consistent investigation workflows
 
-## 🧩 Project Overview
+## Features
 
-In security operations, one of the biggest challenges is distinguishing real threats from noisy alerts. This project explores how data analysis and lightweight automation can help prioritize meaningful signals.
+- Log parsing and analysis with Python and pandas
+- Simple anomaly detection using threshold-based logic
+- Simulated alert triage workflow
+- Basic mapping to MITRE ATT&CK-style categories
+- Clean, lightweight, recruiter-friendly structure
 
----
+## Tech Stack
 
-## 🛠️ Technologies Used
+- Python 3
+- pandas
 
-- Python
-- Pandas
-- NumPy
-- Basic rule-based detection logic
+## Project Structure
+
+```text
+log-analysis-anomaly-detection/
+├── README.md
+├── log_analysis.py
+├── sample_logs.csv
+├── requirements.txt
+├── .gitignore
+└── LICENSE## 🛠️ Technologies Used
 
 ---
 
