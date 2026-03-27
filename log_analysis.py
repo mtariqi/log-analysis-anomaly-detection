@@ -34,7 +34,7 @@ SEVERITY_RULES: dict[str, int] = {
     "login":    5,
 }
 
-SEVERITY_LABELS = {1: "🔴 CRITICAL", 2: "🟠 HIGH", 3: "🟡 MEDIUM", 4: "🔵 LOW", 5: "⚪ INFO"}
+SEVERITY_LABELS = {1: "CRITICAL", 2: "HIGH", 3: "MEDIUM", 4: "LOW", 5: "INFO"}
 
 
 # ── Sample log generator ──────────────────────────────────────────────────────
@@ -125,7 +125,7 @@ def detect_high_activity(df: pd.DataFrame, threshold: int = 3) -> pd.DataFrame:
 def triage_alerts(alerts_df: pd.DataFrame) -> None:
     """Print a formatted triage summary."""
     if alerts_df.empty:
-        print("  ✅  No anomalies detected.\n")
+        print("No anomalies detected.\n")
         return
     for _, row in alerts_df.iterrows():
         print(f"  ┌─ User      : {row.get('user', 'N/A')}")
@@ -171,18 +171,18 @@ def print_report(df: pd.DataFrame,
         print(f"  {label:<20} {bar} ({count})")
 
     # ── MITRE ATT&CK coverage ─────────────────────────────────────
-    print("\n\n🗺️   MITRE ATT&CK EVENT COVERAGE")
+    print("\n\n  MITRE ATT&CK EVENT COVERAGE")
     print("-" * 40)
     mitre_summary = df.groupby(["mitre_tactic", "mitre_technique"]).size().reset_index(name="count")
     for _, row in mitre_summary.iterrows():
         print(f"  [{row['count']:>2}x]  {row['mitre_tactic']:<26} {row['mitre_technique']}")
 
     # ── Anomaly triage ────────────────────────────────────────────
-    print(f"\n\n🚨  ANOMALY DETECTION — HIGH ACTIVITY (threshold > 3)")
+    print(f"\n\n ANOMALY DETECTION — HIGH ACTIVITY (threshold > 3)")
     print("-" * 40)
     triage_alerts(high_activity_alerts)
 
-    print(f"\n🚨  ANOMALY DETECTION — BRUTE-FORCE (≥3 failures / 5 min)")
+    print(f"\n ANOMALY DETECTION — BRUTE-FORCE (≥3 failures / 5 min)")
     print("-" * 40)
     triage_alerts(brute_force_alerts)
 
