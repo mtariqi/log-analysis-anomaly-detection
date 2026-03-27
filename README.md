@@ -231,6 +231,19 @@ Contributions, issues, and feature requests are welcome.
 5. Open a Pull Request
 
 ---
+## 📄 Citation
+
+If you use this project in your research or work, please cite it:
+
+> Islam, Md Tariqul. (2026). *Security Log Analysis & Anomaly Detection Engine*. 
+> Zenodo. https://doi.org/10.5281/zenodo.19264645
+```
+
+---
+
+**Add the DOI to your CV / LinkedIn** — under the project entry, list it as:
+```
+Published: https://doi.org/10.5281/zenodo.19264645
 
 ## 👤 Author
 
