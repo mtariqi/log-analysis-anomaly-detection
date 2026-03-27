@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: Security Log Analysis & Anomaly Detection Engine
+message: "If you use this software, please cite it."
+authors:
+  - family-names: Islam
+    given-names: Md Tariqul
+    orcid: ""
+repository-code: https://github.com/mtariqi/log-analysis-anomaly-detection
+version: 1.0.0
+date-released: 2024-01-01
+license: MIT
+keywords:
+  - security
+  - log-analysis
+  - mitre-attack
+  - anomaly-detection
