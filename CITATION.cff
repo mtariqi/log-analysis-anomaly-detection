@@ -4,7 +4,7 @@ message: "If you use this software, please cite it."
 authors:
   - family-names: Islam
     given-names: Md Tariqul
-    orcid: ""
+    orcid: "0009-0009-6545-8040"
 repository-code: https://github.com/mtariqi/log-analysis-anomaly-detection
 version: 1.0.0
 date-released: 2024-01-01
